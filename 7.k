@@ -47,10 +47,9 @@ f:{x:"[",x
 / alternative that avoids the cut+raze via group.
 / note group sorts by keys in k9. no destructuring assignment.
 
-g:{seqs:+(s s x;s x;x)
-   isbracket:x in "[]"
-   inbrackets:mod+\isbracket
-   x:=seqs!inbrackets
+g:{inbrackets:mod+\x in "[]"
+   x:+(s s x;s x;x)
+   x:=x!inbrackets
    ABAs:*x
    BABs::/x
    ABAs:{</(*x)=/:1_x:+x}#ABAs
@@ -58,10 +57,9 @@ g:{seqs:+(s s x;s x;x)
    |/ABAs in BABs}
 
 / shorter. ~~0 fixes a type issue in 2021.10.21
-g:{seqs:+(s s x;s x;x)
-   isbracket:x in "[]"
-   inbrackets:mod+\isbracket
-   x:=seqs!inbrackets
+g:{inbrackets:mod+\x in "[]"
+   x:+(s s x;s x;x)
+   x:=x!inbrackets
    x:@[x;~~0;(3#1_)'{</(*x)=/:1_x:+x}#]
    |/in/x}
 
