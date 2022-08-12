@@ -60,9 +60,7 @@ g:{inbrackets:mod+\x in "[]"
    |/ABAs in BABs}
 
 / shorter. ~~0 fixes a type issue in 2021.10.21
-g:{inbrackets:mod+\x in "[]"
-   x:+(s s x;s x;x)
-   x:=x!inbrackets
+g:{x:=(+(s s x;s x;x))!mod+\x in "[]"
    x:@[x;~~0;(3#1_)'{</(*x)=/:1_x:+x}#]
    |/in/x}
 
