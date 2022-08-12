@@ -1,8 +1,11 @@
 / k9 li 2021.10.21 1 7
-/ see also: https://github.com/mkst/aoc/blob/master/2016/07.q
 / may need some |': to exclude bracket-inclusive substrings
 / part 1 could be vectorised more
 / ragged indexing can shine here
+/
+/ see also:
+/ https://github.com/mkst/aoc/blob/master/2016/07.q
+/ https://www.reddit.com/r/adventofcode/comments/5gy1f2/2016_day_7_solutions/
 
 s: :':
 input: 0:`7.txt
