@@ -59,11 +59,13 @@ g:{inbrackets:mod+\x in "[]"
    ABAs:+3#1_+ABAs
    |/ABAs in BABs}
 
-
 / shorter. ~~0 fixes a type issue in 2021.10.21
 / yes, can inline x but too hard to read
 g:{x:(+(s s x;s x;x))@=mod+\x in "[]"
    |/in/@[x;~~0;+3#1_+{</(*x)=/:1_x:+x}#]}
+/ alt
+g:{x:(+(s s x;s x;x))@=mod+\x in "[]"
+   |/{(</(*x)=/:1_x)&(+3#1_x:+x)in y}/x}
 
 258~+/g'input
 
