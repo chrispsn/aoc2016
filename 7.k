@@ -6,6 +6,7 @@
 / see also:
 / https://github.com/mkst/aoc/blob/master/2016/07.q
 / https://www.reddit.com/r/adventofcode/comments/5gy1f2/2016_day_7_solutions/daw4lj0/
+/ https://ngn.codeberg.page/vim/a16/07.k.html
 
 s: :':
 input: 0:`7.txt
