@@ -39,7 +39,7 @@ f:{x:"[",x
    
 / shorter
 f:{x:"[",x
-   x:(&x in "[]")^+(s s x;s x;x)
+   x:(&x<"^")^+(s s x;s x;x)
    x@:&'~\:mod!#x
    x:,/'x
    x:@[x;0;(3#1_)'{</(*x)=/:1_x:+x}#]
@@ -61,10 +61,10 @@ g:{inbrackets:mod+\x in "[]"
 
 / shorter. ~~0 fixes a type issue in 2021.10.21
 / yes, can inline x but too hard to read
-g:{x:(+(s s x;s x;x))@=mod+\x in "[]"
+g:{x:(+(s s x;s x;x))@=mod+\x<"^"
    |/in/@[x;~~0;+3#1_+{</(*x)=/:1_x:+x}#]}
 / alt
-g:{x:(+(s s x;s x;x))@=mod+\x in "[]"
+g:{x:(+(s s x;s x;x))@=mod+\x<"^"
    |/{(</(*x)=/:1_x)&(+3#1_x:+x)in y}/x}
 
 258~+/g'input
